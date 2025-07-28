@@ -10,3 +10,8 @@ cursor.execute("""
     FROM Jogo J
     WHERE J.preco < (SELECT AVG(preco) FROM Jogo)
  """)
+
+for i in cursor.fetchall():
+    print(i)
+
+connection.close()
