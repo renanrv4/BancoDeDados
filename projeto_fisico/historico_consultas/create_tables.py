@@ -7,10 +7,21 @@ cursor = connection.cursor()
 cursor.execute("""
 CREATE TABLE Grupo(
     grupo_ID VARCHAR(8) PRIMARY KEY,
-    Num_membros VARCHAR(3) NOT NULL,
     Nome VARCHAR(40) NOT NULL
 );
 """)
+
+#cursor.execute("""
+
+#CREATE VIEW Grupo_View AS
+#    SELECT G.grupo_ID as grupo_ID, G.Nome as Nome, 
+#                    (SELECT COUNT(*) as num_membros
+#                    FROM UCG
+#                    WHERE grupo_ID = G.grupo_ID)
+#           AS Num_membros
+#    FROM Grupo G
+
+#""")
 
 cursor.execute("""
 CREATE TABLE Cargo(

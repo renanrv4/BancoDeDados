@@ -1,0 +1,53 @@
+import sqlite3
+
+connection = sqlite3.connect('steam.db')
+
+cursor = connection.cursor()
+
+#Povoamento dos jogos
+cursor.execute("INSERT INTO Jogo (jogo_ID, preco, nome) VALUES ('182828', 35, 'AQW')")
+cursor.execute("INSERT INTO Jogo (jogo_ID, preco, nome) VALUES ('182827', 50, 'PMW')")
+cursor.execute("INSERT INTO Jogo (jogo_ID, preco, nome) VALUES ('182826', 15, 'BD25')")
+
+#Povoamento Desenvolvedora
+
+cursor.execute("INSERT INTO Desenvolvedor (user_ID) VALUES ('desenvolvedor1')")
+
+#Povoamento Desenvolve
+
+cursor.execute("INSERT INTO Desenvolve (developer_ID, game_ID) VALUES ('desenvolvedor1', '182828')")
+cursor.execute("INSERT INTO Desenvolve (developer_ID, game_ID) VALUES ('desenvolvedor1', '182827')")
+cursor.execute("INSERT INTO Desenvolve (developer_ID, game_ID) VALUES ('desenvolvedor1', '182826')")
+
+
+# Povoamento Relacionamento UCG // Joab - Row SubQuery/Anti-Join:
+
+cursor.execute("INSERT INTO UCG (grupo_ID, user_ID, cargo_ID) VALUES ('001', 'Joab', '01')")
+
+cursor.execute("INSERT INTO UCG (grupo_ID, user_ID, cargo_ID) VALUES ('001', 'Renan', '01')")
+
+cursor.execute("INSERT INTO UCG (grupo_ID, user_ID, cargo_ID) VALUES ('001', 'Luis', '02')")
+
+cursor.execute("INSERT INTO UCG (grupo_ID, user_ID, cargo_ID) VALUES ('002', 'Hugo', '01')")
+
+cursor.execute("INSERT INTO UCG (grupo_ID, user_ID, cargo_ID) VALUES ('002', 'Gabriel', '02')")
+
+cursor.execute("INSERT INTO UCG (grupo_ID, user_ID, cargo_ID) VALUES ('002', 'Diego', '02')")
+
+
+
+# Povoamento Grupos // Diego - Group By / Having
+
+cursor.execute("INSERT INTO Grupo (grupo_ID, Nome) VALUES ('002', 'IDK_Servidores')")
+
+cursor.execute("INSERT INTO Grupo (grupo_ID, Nome) VALUES ('001', 'SPORTS_GANG')")
+
+#Povoamento Cargos // Diego - Group By / Having
+
+cursor.execute("INSERT INTO Cargo (cargo_ID, nivel_de_hierarquia, Nome) VALUES ('01', '1', 'Administrador')")
+cursor.execute("INSERT INTO Cargo (cargo_ID, nivel_de_hierarquia, Nome) VALUES ('02', '2', 'Membro')")
+
+
+connection.commit()
+
+connection.close()
