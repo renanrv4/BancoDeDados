@@ -51,7 +51,7 @@
     <links xmi:type="eer:RelationshipLink" xmi:id="_fBqFIEYxEfCBOMVhFvIWtg" source="_q1MaEEYwEfCBOMVhFvIWtg" target="_cNOOoEYxEfCBOMVhFvIWtg" cardinality="MANY"/>
     <links xmi:type="eer:RelationshipLink" xmi:id="_fZ4X4EYxEfCBOMVhFvIWtg" source="_r3QUAEYwEfCBOMVhFvIWtg" target="_cNOOoEYxEfCBOMVhFvIWtg" participation="TOTAL" cardinality="MANY"/>
     <links xmi:type="eer:RelationshipLink" xmi:id="_lIxNUEYxEfCBOMVhFvIWtg" source="_jPChAEYwEfCBOMVhFvIWtg" target="_iAOvEEYxEfCBOMVhFvIWtg" cardinality="MANY" role="amigo"/>
-    <links xmi:type="eer:RelationshipLink" xmi:id="_mTO1UEYxEfCBOMVhFvIWtg" source="_jPChAEYwEfCBOMVhFvIWtg" target="_iAOvEEYxEfCBOMVhFvIWtg" role="usuário"/>
+    <links xmi:type="eer:RelationshipLink" xmi:id="_mTO1UEYxEfCBOMVhFvIWtg" source="_jPChAEYwEfCBOMVhFvIWtg" target="_iAOvEEYxEfCBOMVhFvIWtg" cardinality="MANY" role="usuário"/>
     <links xmi:type="eer:InheritanceGL" xmi:id="_2IKGoEYxEfCBOMVhFvIWtg" source="_jPChAEYwEfCBOMVhFvIWtg" target="_0fW80EYxEfCBOMVhFvIWtg"/>
     <links xmi:type="eer:RelationshipLink" xmi:id="_SBUl4EYyEfCBOMVhFvIWtg" source="_ox9XAEYwEfCBOMVhFvIWtg" cardinality="MANY"/>
     <links xmi:type="eer:RelationshipLink" xmi:id="_TaLPMEYyEfCBOMVhFvIWtg" source="_jPChAEYwEfCBOMVhFvIWtg"/>
@@ -405,7 +405,7 @@
       <styles xmi:type="notation:DescriptionStyle" xmi:id="_clEScVwgEfC50NhyafVDcw"/>
       <styles xmi:type="notation:FontStyle" xmi:id="_clESclwgEfC50NhyafVDcw" fontName="Segoe UI"/>
       <styles xmi:type="notation:FillStyle" xmi:id="_clESc1wgEfC50NhyafVDcw"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_clESdFwgEfC50NhyafVDcw" x="-120" y="654" width="91" height="43"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_clESdFwgEfC50NhyafVDcw" x="-126" y="648" width="91" height="43"/>
     </children>
     <styles xmi:type="notation:DiagramStyle" xmi:id="_iYXXsUYwEfCBOMVhFvIWtg"/>
     <edges xmi:type="notation:Edge" xmi:id="_U-0HMEYxEfCBOMVhFvIWtg" type="4006" element="_U-zgIEYxEfCBOMVhFvIWtg" source="_jPHZgEYwEfCBOMVhFvIWtg" target="_UD4I8UYxEfCBOMVhFvIWtg">
@@ -768,8 +768,8 @@
     <edges xmi:type="notation:Edge" xmi:id="_y6IP8FwgEfC50NhyafVDcw" type="4007" element="_y6HB0FwgEfC50NhyafVDcw" source="_iAPWIEYxEfCBOMVhFvIWtg" target="_clEScFwgEfC50NhyafVDcw">
       <styles xmi:type="notation:RoutingStyle" xmi:id="_y6IP8VwgEfC50NhyafVDcw"/>
       <styles xmi:type="notation:FontStyle" xmi:id="_y6IP8lwgEfC50NhyafVDcw" fontName="Segoe UI"/>
-      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_y6IP81wgEfC50NhyafVDcw" points="[-44, -24, 89, -8]$[-46, -25, 87, -9]$[-92, -25, 41, -9]"/>
-      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_y6KsMFwgEfC50NhyafVDcw" id="(0.5321100917431193,1.0)"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_y6IP81wgEfC50NhyafVDcw" points="[-14, -4, 131, 0]$[-100, -4, 45, 0]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_y6KsMFwgEfC50NhyafVDcw" id="(0.22935779816513763,0.3783783783783784)"/>
     </edges>
   </notation:Diagram>
 </xmi:XMI>
