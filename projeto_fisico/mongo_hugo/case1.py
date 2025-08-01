@@ -9,6 +9,7 @@ collection_servidor = database['servidor']
 
 # Limpar a coleção
 collection_jogo.delete_many({})
+collection_servidor.delete_many({})
 
 # Mapeamento do caso 1 (um documento referenciando apenas um documento) para o relacionamento jogo/servidor
 
