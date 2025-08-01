@@ -50,7 +50,7 @@ jogo_dbd = {'nome': 'Dead By Daylight',
 
 jogos_insert = collection_jogo.insert_many([jogo_cs2,jogo_dbd,jogo_paladins])
 
-# Consulta para o caso 3 -> Projetar os ids artificiais e os status dos servidores do jogo cujo nome é "Dead By Daylight"
+# Consulta para o caso 3 -> Projetar os ids e os status dos servidores do jogo cujo nome é "Dead By Daylight"
 
 documento_dbd = collection_jogo.find_one({'nome': 'Dead By Daylight'})
 
