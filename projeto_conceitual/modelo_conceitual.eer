@@ -65,8 +65,8 @@
     <links xmi:type="eer:RelationshipLink" xmi:id="_X39ekEYxEfCBOMVhFvIWtg" source="_q1MaEEYwEfCBOMVhFvIWtg" target="_UD4I8EYxEfCBOMVhFvIWtg" participation="TOTAL" isIdentifier="true"/>
     <links xmi:type="eer:RelationshipLink" xmi:id="_fBqFIEYxEfCBOMVhFvIWtg" source="_q1MaEEYwEfCBOMVhFvIWtg" target="_cNOOoEYxEfCBOMVhFvIWtg" cardinality="MANY"/>
     <links xmi:type="eer:RelationshipLink" xmi:id="_fZ4X4EYxEfCBOMVhFvIWtg" source="_r3QUAEYwEfCBOMVhFvIWtg" target="_cNOOoEYxEfCBOMVhFvIWtg" participation="TOTAL" cardinality="MANY"/>
-    <links xmi:type="eer:RelationshipLink" xmi:id="_lIxNUEYxEfCBOMVhFvIWtg" source="_jPChAEYwEfCBOMVhFvIWtg" target="_iAOvEEYxEfCBOMVhFvIWtg" cardinality="MANY" role="amigo"/>
-    <links xmi:type="eer:RelationshipLink" xmi:id="_mTO1UEYxEfCBOMVhFvIWtg" source="_jPChAEYwEfCBOMVhFvIWtg" target="_iAOvEEYxEfCBOMVhFvIWtg" cardinality="MANY" role="usuário"/>
+    <links xmi:type="eer:RelationshipLink" xmi:id="_lIxNUEYxEfCBOMVhFvIWtg" source="_jPChAEYwEfCBOMVhFvIWtg" target="_iAOvEEYxEfCBOMVhFvIWtg" cardinality="MANY" role="Seguidor"/>
+    <links xmi:type="eer:RelationshipLink" xmi:id="_mTO1UEYxEfCBOMVhFvIWtg" source="_jPChAEYwEfCBOMVhFvIWtg" target="_iAOvEEYxEfCBOMVhFvIWtg" cardinality="MANY" role="Seguido"/>
     <links xmi:type="eer:InheritanceGL" xmi:id="_2IKGoEYxEfCBOMVhFvIWtg" source="_jPChAEYwEfCBOMVhFvIWtg" target="_0fW80EYxEfCBOMVhFvIWtg"/>
     <links xmi:type="eer:RelationshipLink" xmi:id="_SBUl4EYyEfCBOMVhFvIWtg" source="_ox9XAEYwEfCBOMVhFvIWtg" cardinality="MANY"/>
     <links xmi:type="eer:RelationshipLink" xmi:id="_TaLPMEYyEfCBOMVhFvIWtg" source="_jPChAEYwEfCBOMVhFvIWtg"/>
@@ -597,7 +597,7 @@
         <layoutConstraint xmi:type="notation:Location" xmi:id="_lIx0ZUYxEfCBOMVhFvIWtg" x="11" y="17"/>
       </children>
       <children xmi:type="notation:DecorationNode" xmi:id="_lIx0ZkYxEfCBOMVhFvIWtg" type="6007">
-        <layoutConstraint xmi:type="notation:Location" xmi:id="_lIx0Z0YxEfCBOMVhFvIWtg" x="-20" y="17"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_lIx0Z0YxEfCBOMVhFvIWtg" x="-44" y="22"/>
       </children>
       <styles xmi:type="notation:RoutingStyle" xmi:id="_lIx0YUYxEfCBOMVhFvIWtg"/>
       <styles xmi:type="notation:FontStyle" xmi:id="_lIx0YkYxEfCBOMVhFvIWtg" fontName="Segoe UI"/>
