@@ -7,7 +7,7 @@
     <nodes xmi:type="eer:Entity" xmi:id="_r3QUAEYwEfCBOMVhFvIWtg" name="Item" AttributeLinkSource="_IspjQEY3EfCXY-nq7PyL3w _NFNCcEY4EfCXY-nq7PyL3w _VTQpAEY4EfCXY-nq7PyL3w" relationshipLink="_fZ4X4EYxEfCBOMVhFvIWtg _teQIIG4eEfC_UfMr1rasSA"/>
     <nodes xmi:type="eer:Relationship" xmi:id="_UD4I8EYxEfCBOMVhFvIWtg" name="possui" isIdentifier="true" relationshipLink="_U-zgIEYxEfCBOMVhFvIWtg _X39ekEYxEfCBOMVhFvIWtg"/>
     <nodes xmi:type="eer:Relationship" xmi:id="_cNOOoEYxEfCBOMVhFvIWtg" name="possui" relationshipLink="_fBqFIEYxEfCBOMVhFvIWtg _fZ4X4EYxEfCBOMVhFvIWtg"/>
-    <nodes xmi:type="eer:Relationship" xmi:id="_iAOvEEYxEfCBOMVhFvIWtg" name="é amigo de" AttributeLinkSource="_y6HB0FwgEfC50NhyafVDcw _19h14G0_EfC6AqAMqKCzPA" relationshipLink="_lIxNUEYxEfCBOMVhFvIWtg _mTO1UEYxEfCBOMVhFvIWtg"/>
+    <nodes xmi:type="eer:Relationship" xmi:id="_iAOvEEYxEfCBOMVhFvIWtg" name="segue" AttributeLinkSource="_y6HB0FwgEfC50NhyafVDcw _19h14G0_EfC6AqAMqKCzPA" relationshipLink="_lIxNUEYxEfCBOMVhFvIWtg _mTO1UEYxEfCBOMVhFvIWtg"/>
     <nodes xmi:type="eer:Inheritance" xmi:id="_0fW80EYxEfCBOMVhFvIWtg" inheritanceGL="_2IKGoEYxEfCBOMVhFvIWtg" inheritanceSL="_BPLikE_vEfCaFvXZtFX7aA _IDlOkE_vEfCaFvXZtFX7aA"/>
     <nodes xmi:type="eer:Entity" xmi:id="_204CsEYxEfCBOMVhFvIWtg" name="Distribuidor" relationshipLink="_gOTgoEZAEfCXY-nq7PyL3w" inheritanceSL="_IDlOkE_vEfCaFvXZtFX7aA"/>
     <nodes xmi:type="eer:Entity" xmi:id="_Gl1aAEYyEfCBOMVhFvIWtg" name="Desenvolvedor" relationshipLink="_bFGLIEZAEfCXY-nq7PyL3w" inheritanceSL="_BPLikE_vEfCaFvXZtFX7aA"/>
