@@ -3,7 +3,7 @@
   <eer:Schema xmi:id="_iYFq4EYwEfCBOMVhFvIWtg">
     <nodes xmi:type="eer:Entity" xmi:id="_jPChAEYwEfCBOMVhFvIWtg" name="Usuário" AttributeLinkSource="_jVhUwEY2EfCXY-nq7PyL3w _73PsMEY4EfCXY-nq7PyL3w _HtTXYEY9EfCXY-nq7PyL3w _1Gmb0EZZEfCCaOXWzCEvKQ" relationshipLink="_U-zgIEYxEfCBOMVhFvIWtg _lIxNUEYxEfCBOMVhFvIWtg _mTO1UEYxEfCBOMVhFvIWtg _TaLPMEYyEfCBOMVhFvIWtg _Uok-MEZBEfCXY-nq7PyL3w _IKmIoEZDEfCXY-nq7PyL3w _jKNQAG4fEfC_UfMr1rasSA" inheritanceGL="_2IKGoEYxEfCBOMVhFvIWtg"/>
     <nodes xmi:type="eer:Entity" xmi:id="_ox9XAEYwEfCBOMVhFvIWtg" name="Jogo" AttributeLinkSource="_8T1XAEY3EfCXY-nq7PyL3w __p-zcEY3EfCXY-nq7PyL3w _DpA00EY4EfCXY-nq7PyL3w" relationshipLink="_SBUl4EYyEfCBOMVhFvIWtg _bh7REEZAEfCXY-nq7PyL3w _lAigkEZAEfCXY-nq7PyL3w _JRCMQEZDEfCXY-nq7PyL3w _hI2RsG4eEfC_UfMr1rasSA"/>
-    <nodes xmi:type="eer:Entity" xmi:id="_q1MaEEYwEfCBOMVhFvIWtg" name="Inventario" relationshipLink="_X39ekEYxEfCBOMVhFvIWtg _fBqFIEYxEfCBOMVhFvIWtg" isWeak="true"/>
+    <nodes xmi:type="eer:Entity" xmi:id="_q1MaEEYwEfCBOMVhFvIWtg" name="Inventario" AttributeLinkSource="_ikiWIHCbEfCnK6KtjuuzPw" relationshipLink="_X39ekEYxEfCBOMVhFvIWtg _fBqFIEYxEfCBOMVhFvIWtg" isWeak="true"/>
     <nodes xmi:type="eer:Entity" xmi:id="_r3QUAEYwEfCBOMVhFvIWtg" name="Item" AttributeLinkSource="_IspjQEY3EfCXY-nq7PyL3w _NFNCcEY4EfCXY-nq7PyL3w _VTQpAEY4EfCXY-nq7PyL3w" relationshipLink="_fZ4X4EYxEfCBOMVhFvIWtg _teQIIG4eEfC_UfMr1rasSA"/>
     <nodes xmi:type="eer:Relationship" xmi:id="_UD4I8EYxEfCBOMVhFvIWtg" name="possui" isIdentifier="true" relationshipLink="_U-zgIEYxEfCBOMVhFvIWtg _X39ekEYxEfCBOMVhFvIWtg"/>
     <nodes xmi:type="eer:Relationship" xmi:id="_cNOOoEYxEfCBOMVhFvIWtg" name="possui" relationshipLink="_fBqFIEYxEfCBOMVhFvIWtg _fZ4X4EYxEfCBOMVhFvIWtg"/>
@@ -61,6 +61,7 @@
     <nodes xmi:type="eer:Attribute" xmi:id="_hS8FAG4iEfC_UfMr1rasSA" name="evento_ID" type="IDENTIFIER" AttributeLinkTarget="_w99zcG4iEfC_UfMr1rasSA"/>
     <nodes xmi:type="eer:Attribute" xmi:id="_kz0x0G4iEfC_UfMr1rasSA" name="duracao" AttributeLinkTarget="_wQiFsG4iEfC_UfMr1rasSA"/>
     <nodes xmi:type="eer:Attribute" xmi:id="_o5eYkG4iEfC_UfMr1rasSA" name="nome" AttributeLinkTarget="_xspeYG4iEfC_UfMr1rasSA"/>
+    <nodes xmi:type="eer:Attribute" xmi:id="_fHckMHCbEfCnK6KtjuuzPw" name="público" AttributeLinkTarget="_ikiWIHCbEfCnK6KtjuuzPw"/>
     <links xmi:type="eer:RelationshipLink" xmi:id="_U-zgIEYxEfCBOMVhFvIWtg" source="_jPChAEYwEfCBOMVhFvIWtg" target="_UD4I8EYxEfCBOMVhFvIWtg"/>
     <links xmi:type="eer:RelationshipLink" xmi:id="_X39ekEYxEfCBOMVhFvIWtg" source="_q1MaEEYwEfCBOMVhFvIWtg" target="_UD4I8EYxEfCBOMVhFvIWtg" participation="TOTAL" isIdentifier="true"/>
     <links xmi:type="eer:RelationshipLink" xmi:id="_fBqFIEYxEfCBOMVhFvIWtg" source="_q1MaEEYwEfCBOMVhFvIWtg" target="_cNOOoEYxEfCBOMVhFvIWtg" cardinality="MANY"/>
@@ -124,6 +125,7 @@
     <links xmi:type="eer:AttributeLink" xmi:id="_wQiFsG4iEfC_UfMr1rasSA" source="_mLqrUG4eEfC_UfMr1rasSA" target="_kz0x0G4iEfC_UfMr1rasSA"/>
     <links xmi:type="eer:AttributeLink" xmi:id="_w99zcG4iEfC_UfMr1rasSA" source="_mLqrUG4eEfC_UfMr1rasSA" target="_hS8FAG4iEfC_UfMr1rasSA"/>
     <links xmi:type="eer:AttributeLink" xmi:id="_xspeYG4iEfC_UfMr1rasSA" source="_mLqrUG4eEfC_UfMr1rasSA" target="_o5eYkG4iEfC_UfMr1rasSA"/>
+    <links xmi:type="eer:AttributeLink" xmi:id="_ikiWIHCbEfCnK6KtjuuzPw" source="_q1MaEEYwEfCBOMVhFvIWtg" target="_fHckMHCbEfCnK6KtjuuzPw"/>
   </eer:Schema>
   <notation:Diagram xmi:id="_iYXXsEYwEfCBOMVhFvIWtg" type="Eer" element="_iYFq4EYwEfCBOMVhFvIWtg" name="default.eer" measurementUnit="Pixel">
     <children xmi:type="notation:Node" xmi:id="_jPHZgEYwEfCBOMVhFvIWtg" type="2001" element="_jPChAEYwEfCBOMVhFvIWtg">
@@ -541,6 +543,13 @@
       <styles xmi:type="notation:FontStyle" xmi:id="_o5fmsm4iEfC_UfMr1rasSA" fontName="Segoe UI"/>
       <styles xmi:type="notation:FillStyle" xmi:id="_o5fms24iEfC_UfMr1rasSA"/>
       <layoutConstraint xmi:type="notation:Bounds" xmi:id="_o5fmtG4iEfC_UfMr1rasSA" x="-204" y="618" width="60" height="36"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_fIMLEHCbEfCnK6KtjuuzPw" type="2004" element="_fHckMHCbEfCnK6KtjuuzPw">
+      <children xmi:type="notation:DecorationNode" xmi:id="_fINZMHCbEfCnK6KtjuuzPw" type="5005"/>
+      <styles xmi:type="notation:DescriptionStyle" xmi:id="_fIMLEXCbEfCnK6KtjuuzPw"/>
+      <styles xmi:type="notation:FontStyle" xmi:id="_fIMLEnCbEfCnK6KtjuuzPw" fontName="Segoe UI"/>
+      <styles xmi:type="notation:FillStyle" xmi:id="_fIMLE3CbEfCnK6KtjuuzPw"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_fIMLFHCbEfCnK6KtjuuzPw" x="180" y="936" width="101" height="47"/>
     </children>
     <styles xmi:type="notation:DiagramStyle" xmi:id="_iYXXsUYwEfCBOMVhFvIWtg"/>
     <edges xmi:type="notation:Edge" xmi:id="_U-0HMEYxEfCBOMVhFvIWtg" type="4006" element="_U-zgIEYxEfCBOMVhFvIWtg" source="_jPHZgEYwEfCBOMVhFvIWtg" target="_UD4I8UYxEfCBOMVhFvIWtg">
@@ -1038,6 +1047,11 @@
       <styles xmi:type="notation:RoutingStyle" xmi:id="_xsqFcW4iEfC_UfMr1rasSA"/>
       <styles xmi:type="notation:FontStyle" xmi:id="_xsqFcm4iEfC_UfMr1rasSA" fontName="Segoe UI"/>
       <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_xsqFc24iEfC_UfMr1rasSA" points="[-47, -42, 148, 126]$[-155, -146, 40, 22]"/>
+    </edges>
+    <edges xmi:type="notation:Edge" xmi:id="_iki9MHCbEfCnK6KtjuuzPw" type="4007" element="_ikiWIHCbEfCnK6KtjuuzPw" source="_q1MaEUYwEfCBOMVhFvIWtg" target="_fIMLEHCbEfCnK6KtjuuzPw">
+      <styles xmi:type="notation:RoutingStyle" xmi:id="_iki9MXCbEfCnK6KtjuuzPw"/>
+      <styles xmi:type="notation:FontStyle" xmi:id="_iki9MnCbEfCnK6KtjuuzPw" fontName="Segoe UI"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_iki9M3CbEfCnK6KtjuuzPw" points="[8, 20, 12, -55]$[39, 75, 43, 0]"/>
     </edges>
   </notation:Diagram>
 </xmi:XMI>
