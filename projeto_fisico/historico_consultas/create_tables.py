@@ -12,15 +12,15 @@ CREATE TABLE Grupo(
 """)
 
 #View pra contar o atributo derivado
-#cursor.execute("""
+cursor.execute("""
 
-#CREATE VIEW Grupo_View AS
-#    SELECT G.grupo_ID as grupo_ID, G.Nome as Nome, 
-#                    (SELECT COUNT(*) as num_membros
-#                    FROM UCG
-#                    WHERE grupo_ID = G.grupo_ID)
-#           AS Num_membros
-#    FROM Grupo G
+CREATE VIEW Grupo_View AS
+    SELECT G.grupo_ID as grupo_ID, G.Nome as Nome, 
+                    (SELECT COUNT(*) as num_membros
+                    FROM UCG
+                    WHERE grupo_ID = G.grupo_ID)
+           AS Num_membros
+    FROM Grupo G
 
 #""")
 
@@ -61,21 +61,21 @@ CREATE TABLE Usuario(
 
 #Opção mais prática: Follow/Unfollow
 
-#cursor.execute("""
-#CREATE TABLE FollowUnfollow(
+cursor.execute("""
+CREATE TABLE Segue(
     
-#            seguidor_ID VARCHAR(10),
-#            seguido_ID VARCHAR(10),
-#            data_inicio DATE NOT NULL,
-#            valido BOOLEAN,
-#            CONSTRAINT FU_PK PRIMARY KEY (user1_ID, user2_ID, data_inicio),
-#            CONSTRAINT seguidor_FK FOREIGN KEY (user1_ID) REFERENCES Usuario (user_ID),
-#            CONSTRAINT seguido_FK FOREIGN KEY (user2_ID) REFERENCES Usuario (user_ID)
-#              
-#              );
+            seguidor_ID VARCHAR(10),
+            seguido_ID VARCHAR(10),
+            data_inicio DATE NOT NULL,
+            valido BOOLEAN,
+            CONSTRAINT FU_PK PRIMARY KEY (user1_ID, user2_ID, data_inicio),
+            CONSTRAINT seguidor_FK FOREIGN KEY (user1_ID) REFERENCES Usuario (user_ID),
+            CONSTRAINT seguido_FK FOREIGN KEY (user2_ID) REFERENCES Usuario (user_ID)
+              
+              );
 
 
-#""")
+""")
 
 cursor.execute("""
 CREATE TABLE Cartao_credito(
@@ -106,7 +106,7 @@ cursor.execute("""
 CREATE TABLE Item(
     item_ID VARCHAR(10) PRIMARY KEY,
     nome VARCHAR(20) NOT NULL,
-    decim NUMERIC(7, 5) NOT NULL,
+    float NUMERIC(7, 5) NOT NULL,
     evento_ID VARCHAR(8), 
                
     CONSTRAINT FK_EVENTO FOREIGN KEY (evento_ID) REFERENCES Evento (evento_ID)
@@ -117,6 +117,7 @@ CREATE TABLE Item(
 cursor.execute("""
 CREATE TABLE Inventario(
     user_ID VARCHAR(10) PRIMARY KEY,
+    publico BOOLEAN NOT NULL,
     CONSTRAINT FK_I FOREIGN KEY (user_ID) REFERENCES Usuario (user_ID)
 );
 """)
@@ -183,7 +184,7 @@ CREATE TABLE UCG(
     CONSTRAINT FK_CARGO FOREIGN KEY (cargo_ID) REFERENCES Cargo (cargo_ID)
 );
 """)
-#Evento - item, Servidor - jogo, Postagem - usuario
+
 cursor.execute("""
 
     CREATE TABLE Evento(
@@ -198,7 +199,7 @@ cursor.execute("""
 cursor.execute("""
     CREATE TABLE Servidor(
         endereco VARCHAR(10) PRIMARY KEY,
-        ativo BOOLEAN,
+        ativo BOOLEAN NOT NULL,
         jogo_ID VARCHAR(10),
                
         CONSTRAINT FK_JOGO FOREIGN KEY (jogo_ID) REFERENCES Jogo (jogo_ID)
@@ -211,9 +212,8 @@ cursor.execute("""
 
     CREATE TABLE Postagem(
     user_ID VARCHAR(10),
-    disc_post VARCHAR(12),
-    tipo VARCHAR(10),
-    conteudo VARCHAR(30),
+    num_postagem NUMBER,
+    conteudo VARCHAR(100),
     
     CONSTRAINT PK_POST PRIMARY KEY (user_ID, disc_post),
     CONSTRAINT FK_POST FOREIGN KEY (user_id) REFERENCES Usuario (user_ID)
