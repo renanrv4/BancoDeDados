@@ -51,11 +51,10 @@
     <nodes xmi:type="eer:Relationship" xmi:id="_dSlx0G4eEfC_UfMr1rasSA" name="Está hospedado" relationshipLink="_hI2RsG4eEfC_UfMr1rasSA _hndgUG4eEfC_UfMr1rasSA"/>
     <nodes xmi:type="eer:Entity" xmi:id="_mLqrUG4eEfC_UfMr1rasSA" name="Evento" AttributeLinkSource="_wQiFsG4iEfC_UfMr1rasSA _w99zcG4iEfC_UfMr1rasSA _xspeYG4iEfC_UfMr1rasSA" relationshipLink="_ueHCoG4eEfC_UfMr1rasSA"/>
     <nodes xmi:type="eer:Relationship" xmi:id="_nVxuAG4eEfC_UfMr1rasSA" name="Participa" relationshipLink="_teQIIG4eEfC_UfMr1rasSA _ueHCoG4eEfC_UfMr1rasSA"/>
-    <nodes xmi:type="eer:Entity" xmi:id="_H9SLsG4fEfC_UfMr1rasSA" name="Postagem" AttributeLinkSource="_7k5LUG4hEfC_UfMr1rasSA _8kauoG4hEfC_UfMr1rasSA _AR9XYG4iEfC_UfMr1rasSA" relationshipLink="_pah-kG4fEfC_UfMr1rasSA" isWeak="true"/>
+    <nodes xmi:type="eer:Entity" xmi:id="_H9SLsG4fEfC_UfMr1rasSA" name="Postagem" AttributeLinkSource="_8kauoG4hEfC_UfMr1rasSA _AR9XYG4iEfC_UfMr1rasSA" relationshipLink="_pah-kG4fEfC_UfMr1rasSA" isWeak="true"/>
     <nodes xmi:type="eer:Relationship" xmi:id="_R9fFUG4fEfC_UfMr1rasSA" name="tem" isIdentifier="true" relationshipLink="_jKNQAG4fEfC_UfMr1rasSA _pah-kG4fEfC_UfMr1rasSA"/>
-    <nodes xmi:type="eer:Attribute" xmi:id="_fhS9sG4hEfC_UfMr1rasSA" name="tipo" AttributeLinkTarget="_7k5LUG4hEfC_UfMr1rasSA"/>
     <nodes xmi:type="eer:Attribute" xmi:id="_vJPi8G4hEfC_UfMr1rasSA" name="conteudo" AttributeLinkTarget="_8kauoG4hEfC_UfMr1rasSA"/>
-    <nodes xmi:type="eer:Attribute" xmi:id="_xbxmQG4hEfC_UfMr1rasSA" name="disc_postagem" type="DISCRIMINATOR" AttributeLinkTarget="_AR9XYG4iEfC_UfMr1rasSA"/>
+    <nodes xmi:type="eer:Attribute" xmi:id="_xbxmQG4hEfC_UfMr1rasSA" name="num_postagem" type="DISCRIMINATOR" AttributeLinkTarget="_AR9XYG4iEfC_UfMr1rasSA"/>
     <nodes xmi:type="eer:Attribute" xmi:id="_GyqrUG4iEfC_UfMr1rasSA" name="servidor_ID" type="IDENTIFIER" AttributeLinkTarget="_N2ViYG4iEfC_UfMr1rasSA"/>
     <nodes xmi:type="eer:Attribute" xmi:id="_Ti3nYG4iEfC_UfMr1rasSA" name="ativo" AttributeLinkTarget="_X9_u4G4iEfC_UfMr1rasSA"/>
     <nodes xmi:type="eer:Attribute" xmi:id="_hS8FAG4iEfC_UfMr1rasSA" name="evento_ID" type="IDENTIFIER" AttributeLinkTarget="_w99zcG4iEfC_UfMr1rasSA"/>
@@ -117,7 +116,6 @@
     <links xmi:type="eer:RelationshipLink" xmi:id="_ueHCoG4eEfC_UfMr1rasSA" source="_mLqrUG4eEfC_UfMr1rasSA" target="_nVxuAG4eEfC_UfMr1rasSA"/>
     <links xmi:type="eer:RelationshipLink" xmi:id="_jKNQAG4fEfC_UfMr1rasSA" source="_jPChAEYwEfCBOMVhFvIWtg" target="_R9fFUG4fEfC_UfMr1rasSA"/>
     <links xmi:type="eer:RelationshipLink" xmi:id="_pah-kG4fEfC_UfMr1rasSA" source="_H9SLsG4fEfC_UfMr1rasSA" target="_R9fFUG4fEfC_UfMr1rasSA" participation="TOTAL" cardinality="MANY" role="" isIdentifier="true"/>
-    <links xmi:type="eer:AttributeLink" xmi:id="_7k5LUG4hEfC_UfMr1rasSA" source="_H9SLsG4fEfC_UfMr1rasSA" target="_fhS9sG4hEfC_UfMr1rasSA"/>
     <links xmi:type="eer:AttributeLink" xmi:id="_8kauoG4hEfC_UfMr1rasSA" source="_H9SLsG4fEfC_UfMr1rasSA" target="_vJPi8G4hEfC_UfMr1rasSA"/>
     <links xmi:type="eer:AttributeLink" xmi:id="_AR9XYG4iEfC_UfMr1rasSA" source="_H9SLsG4fEfC_UfMr1rasSA" target="_xbxmQG4hEfC_UfMr1rasSA"/>
     <links xmi:type="eer:AttributeLink" xmi:id="_N2ViYG4iEfC_UfMr1rasSA" source="_bek2gG4eEfC_UfMr1rasSA" target="_GyqrUG4iEfC_UfMr1rasSA"/>
@@ -488,13 +486,6 @@
       <styles xmi:type="notation:FillStyle" xmi:id="_R9fFVG4fEfC_UfMr1rasSA"/>
       <layoutConstraint xmi:type="notation:Bounds" xmi:id="_R9fFVW4fEfC_UfMr1rasSA" x="540" y="654" width="133" height="37"/>
     </children>
-    <children xmi:type="notation:Node" xmi:id="_fhTkwG4hEfC_UfMr1rasSA" type="2004" element="_fhS9sG4hEfC_UfMr1rasSA">
-      <children xmi:type="notation:DecorationNode" xmi:id="_fhTkxW4hEfC_UfMr1rasSA" type="5005"/>
-      <styles xmi:type="notation:DescriptionStyle" xmi:id="_fhTkwW4hEfC_UfMr1rasSA"/>
-      <styles xmi:type="notation:FontStyle" xmi:id="_fhTkwm4hEfC_UfMr1rasSA" fontName="Segoe UI"/>
-      <styles xmi:type="notation:FillStyle" xmi:id="_fhTkw24hEfC_UfMr1rasSA"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_fhTkxG4hEfC_UfMr1rasSA" x="462" y="888" width="65" height="29"/>
-    </children>
     <children xmi:type="notation:Node" xmi:id="_vJPi8W4hEfC_UfMr1rasSA" type="2004" element="_vJPi8G4hEfC_UfMr1rasSA">
       <children xmi:type="notation:DecorationNode" xmi:id="_vJPi9m4hEfC_UfMr1rasSA" type="5005"/>
       <styles xmi:type="notation:DescriptionStyle" xmi:id="_vJPi8m4hEfC_UfMr1rasSA"/>
@@ -507,7 +498,7 @@
       <styles xmi:type="notation:DescriptionStyle" xmi:id="_xbyNUW4hEfC_UfMr1rasSA"/>
       <styles xmi:type="notation:FontStyle" xmi:id="_xbyNUm4hEfC_UfMr1rasSA" fontName="Segoe UI"/>
       <styles xmi:type="notation:FillStyle" xmi:id="_xbyNU24hEfC_UfMr1rasSA"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xbyNVG4hEfC_UfMr1rasSA" x="672" y="876" width="115" height="29"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xbyNVG4hEfC_UfMr1rasSA" x="690" y="870" width="120" height="48"/>
     </children>
     <children xmi:type="notation:Node" xmi:id="_GyrSYG4iEfC_UfMr1rasSA" type="2004" element="_GyqrUG4iEfC_UfMr1rasSA">
       <children xmi:type="notation:DecorationNode" xmi:id="_GyrSZW4iEfC_UfMr1rasSA" type="5005"/>
@@ -996,13 +987,6 @@
       <styles xmi:type="notation:FontStyle" xmi:id="_pailom4fEfC_UfMr1rasSA" fontName="Segoe UI"/>
       <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_pailo24fEfC_UfMr1rasSA" points="[-9, -67, 7, 107]$[-23, -158, -7, 16]"/>
       <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_palB4G4fEfC_UfMr1rasSA" id="(0.5862068965517241,1.0)"/>
-    </edges>
-    <edges xmi:type="notation:Edge" xmi:id="_7k5yYG4hEfC_UfMr1rasSA" type="4007" element="_7k5LUG4hEfC_UfMr1rasSA" source="_H9SywG4fEfC_UfMr1rasSA" target="_fhTkwG4hEfC_UfMr1rasSA">
-      <styles xmi:type="notation:RoutingStyle" xmi:id="_7k5yYW4hEfC_UfMr1rasSA"/>
-      <styles xmi:type="notation:FontStyle" xmi:id="_7k5yYm4hEfC_UfMr1rasSA" fontName="Segoe UI"/>
-      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_7k5yY24hEfC_UfMr1rasSA" points="[-38, 0, 75, -51]$[-38, 0, 75, -51]$[-108, 47, 5, -4]"/>
-      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_7k7nkG4hEfC_UfMr1rasSA" id="(0.556390977443609,1.0)"/>
-      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_7k7nkW4hEfC_UfMr1rasSA" id="(0.4153846153846154,0.13333333333333333)"/>
     </edges>
     <edges xmi:type="notation:Edge" xmi:id="_8kbVsG4hEfC_UfMr1rasSA" type="4007" element="_8kauoG4hEfC_UfMr1rasSA" source="_H9SywG4fEfC_UfMr1rasSA" target="_vJPi8W4hEfC_UfMr1rasSA">
       <styles xmi:type="notation:RoutingStyle" xmi:id="_8kbVsW4hEfC_UfMr1rasSA"/>
