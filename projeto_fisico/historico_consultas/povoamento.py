@@ -72,21 +72,21 @@ VALUES
 """)
 
 cursor.execute("""
-INSERT INTO Distribuidor (user_ID, distribuidor)
+INSERT INTO Distribuidor (user_ID)
 VALUES
-('7', 'Distrib1'),
-('8', 'Distrib2'),
-('11', 'Valve'),
-('12', 'Eletronic Arts');
+('7'),
+('8'),
+('11'),
+('12');
 """)
 
 cursor.execute("""
-INSERT INTO Desenvolvedor (user_ID, desenvolvedor)
+INSERT INTO Desenvolvedor (user_ID)
 VALUES
-('9', 'Dev1'),
-('10', 'Dev2'),
-('11', 'Valve'),
-('12', 'Eletronic Arts');
+('9'),
+('10'),
+('11'),
+('12');
 """)
 
 cursor.execute("""
