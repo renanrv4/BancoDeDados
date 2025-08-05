@@ -106,7 +106,6 @@ CREATE TABLE Inventario(
 cursor.execute("""
 CREATE TABLE Promocao(
     promocao_ID VARCHAR(10) PRIMARY KEY,
-    promocao NUMERIC(2, 2),
     data_inicio DATE,
     data_final DATE,
     nome VARCHAR(20) NOT NULL
@@ -117,7 +116,7 @@ cursor.execute("""
 CREATE TABLE Compra(
     user_ID VARCHAR(10),
     jogo_ID VARCHAR(10),
-    promocao_ID,
+    promocao_ID VARCHAR(10),
     data_compra DATE,
     nota_fiscal VARCHAR(8) NOT NULL,
     CONSTRAINT PK_COMPRA PRIMARY KEY(user_ID, jogo_ID),
@@ -130,7 +129,6 @@ CREATE TABLE Compra(
 cursor.execute("""
 CREATE TABLE Distribuidor(
     user_ID VARCHAR(10) PRIMARY KEY,
-    distribuidor VARCHAR(8) NOT NULL,
     CONSTRAINT FK_DIST FOREIGN KEY (user_ID) REFERENCES Usuario (user_ID)
 );
 """)
@@ -138,7 +136,6 @@ CREATE TABLE Distribuidor(
 cursor.execute("""
 CREATE TABLE Desenvolvedor(
     user_ID VARCHAR(10) PRIMARY KEY,
-    desenvolvedor VARCHAR(8) NOT NULL,
     CONSTRAINT FK_USER FOREIGN KEY (user_ID) REFERENCES Usuario (user_ID)
 );
 """)
@@ -194,7 +191,7 @@ cursor.execute("""
 
     CREATE TABLE Postagem(
     user_ID VARCHAR(10),
-    num_postagem NUMBER,
+    num_postagem INTEGER,
     conteudo VARCHAR(100),
     
     CONSTRAINT PK_POST PRIMARY KEY (user_ID, num_postagem),
