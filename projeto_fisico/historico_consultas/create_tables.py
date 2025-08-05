@@ -159,7 +159,7 @@ cursor.execute("""
 CREATE TABLE UCG(
     grupo_ID VARCHAR(8),
     user_ID VARCHAR(10),
-    cargo_ID VARCHAR(8),
+    cargo_ID VARCHAR(8) NOT NULL,
     CONSTRAINT PK_UCG PRIMARY KEY (grupo_ID, user_ID),
     CONSTRAINT FK_GRUPO FOREIGN KEY (grupo_ID) REFERENCES Grupo (grupo_ID),
     CONSTRAINT FK_USER FOREIGN KEY (user_ID) REFERENCES Usuario (user_ID),
