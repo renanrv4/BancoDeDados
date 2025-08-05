@@ -110,7 +110,7 @@ cursor.execute("""
 INSERT INTO Item (item_ID, nome, float, evento_ID)
 VALUES
 ('1', 'Adagas Sombrias | Teia-Rubra', 0.00025, '1'),
-('2', 'AWP | Sabedoria do Dragão', 0.00015, '2'),
+('2', 'AWP | Sabedoria do Dragão', 0.00015, NULL),
 ('3', 'Atrocidade Obsidiana', 0.00050, '1');
 """)
 
