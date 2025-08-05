@@ -4,16 +4,16 @@ connection = sqlite3.connect('steam.db')
 
 cursor = connection.cursor()
 
-# Ordenar os jogos do desenvolvedor1 do mais caro pro mais barato
+# Listar todos os usuários que possuem itens que participam de eventos
 
 cursor.execute("""
 
-    SELECT J.nome, J.preco
-    FROM Jogo J, (SELECT *
-                FROM Desenvolve
-                WHERE developer_ID = 'desenvolvedor1') G
-    WHERE J.jogo_ID = G.game_ID
-    ORDER BY J.preco DESC
+    SELECT username
+    FROM Usuario U JOIN (SELECT * 
+                        FROM Possui P JOIN Item I
+                        ON I.item_ID = P.item_ID AND I.evento_ID IS NOT NULL) PI 
+               
+    ON U.user_ID = PI.user_ID
 
 """)
 
