@@ -134,10 +134,10 @@ VALUES
 """)
 
 cursor.execute("""
-INSERT INTO Promocao (promocao_ID, promocao, data_inicio, data_final, nome)
+INSERT INTO Promocao (promocao_ID, data_inicio, data_final, nome)
 VALUES
-('1', 0.50, '2025-11-25', '2025-11-30', 'Black Friday'),
-('2', 0.30, '2025-06-20', '2025-06-27', 'Summer Sale');
+('1', '2025-11-25', '2025-11-30', 'Black Friday'),
+('2', '2025-06-20', '2025-06-27', 'Summer Sale');
 """)
 
 cursor.execute("""
