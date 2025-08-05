@@ -4,10 +4,10 @@ connection = sqlite3.connect('steam.db')
 
 cursor = connection.cursor()
 
-# Retorna os usuários que pertencem ao mesmo grupo e tem o mesmo cargo que 'Joab'
+# Retorna os usuários que pertencem ao mesmo grupo e tem o mesmo cargo que 'Joab' (sem ele)
 cursor.execute("""
     SELECT user_ID, grupo_ID, cargo_ID FROM UCG WHERE (grupo_ID, cargo_ID) = (
-        SELECT grupo_ID, cargo_ID FROM UCG WHERE user_ID = '5')
+        SELECT grupo_ID, cargo_ID FROM UCG WHERE user_ID = '5') AND user_ID <> '5'
 """)
 
 for jogo in cursor.fetchall():
