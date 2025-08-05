@@ -17,6 +17,18 @@ cursor.execute("""
 
 """)
 
+#Versão da consulta anterior com subconsulta de tabela no Where
+
+#cursor.execute("""
+
+#    SELECT username
+#    FROM Usuario
+#    WHERE user_ID IN (SELECT * 
+#                        FROM Possui P JOIN Item I
+#                        ON I.item_ID = P.item_ID AND I.evento_ID IS NOT NULL)
+#
+#""")
+
 for i in cursor.fetchall(): 
     print(i)
 
