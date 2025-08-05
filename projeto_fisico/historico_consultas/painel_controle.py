@@ -115,7 +115,9 @@ while True:
             elif tabela == '2':
                 insert_jogo(input('JOGO ID: '), float(input('PREÇO: ')), input('NOME: '), input('DISTRIBUIDOR ID: '), input('DESENVOLVEDOR ID: '))
             elif tabela == '3':
-                insert_item(input('ITEM ID: '), input('NOME: '), float(input('FLOAT: ')), input('EVENTO ID (ou deixe vazio): ') or None)
+                item_id = input('ITEM ID: ')
+                insert_item(item_id, input('NOME: '), float(input('FLOAT: ')), input('EVENTO ID (ou deixe vazio): ') or None)
+                insert_possui(item_id, input('USER ID (inventário): '))
             elif tabela == '4':
                 insert_evento(input('EVENTO ID: '), input('NOME: '), input('DATA DE INÍCIO (YYYY-MM-DD): '))
             elif tabela == '5':
@@ -162,7 +164,7 @@ while True:
               '7 - Cargo\n' \
               '8 - Desenvolvedor\n' \
               '9 - Distribuidor\n' \
-              '10 - Postagem' \
+              '10 - Postagem\n' \
               '11 - Inventário\n' \
               '12 - Compra\n' \
               '13 - UCG\n' \
