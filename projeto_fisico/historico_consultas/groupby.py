@@ -10,7 +10,7 @@ cursor.execute("""
         FROM Grupo G JOIN (SELECT grupo_ID AS GID, COUNT(*)
                     FROM (SELECT *
                         FROM UCG
-                        WHERE cargo_ID = '01')
+                        WHERE cargo_ID = '1')
                     GROUP BY grupo_ID
                     HAVING COUNT(*) > 1)
         ON G.grupo_ID = GID

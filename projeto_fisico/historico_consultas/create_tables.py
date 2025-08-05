@@ -20,9 +20,9 @@ CREATE VIEW Grupo_View AS
                     FROM UCG
                     WHERE grupo_ID = G.grupo_ID)
            AS Num_membros
-    FROM Grupo G
+    FROM Grupo G;
 
-#""")
+""")
 
 cursor.execute("""
 CREATE TABLE Cargo(
@@ -37,29 +37,10 @@ CREATE TABLE Usuario(
     user_ID VARCHAR(10) PRIMARY KEY,
     username VARCHAR(40) NOT NULL,
     First_name VARCHAR(20) NOT NULL,
-    Last_name VARCHAR(20) NOT NULL,
+    Last_name VARCHAR(20) NOT NULL
 );
 """)
 
-#Checar como funcionaria amizade bidirecional
-#cursor.execute("""
-#CREATE TABLE Amizade(
-    
-#            user1_ID VARCHAR(10),
-#            user2_ID VARCHAR(10),
-#            data_inicio DATE NOT NULL,
-#            valido BOOLEAN,
-#          CONSTRAINT Amizade_PK PRIMARY KEY (user1_ID, user2_ID, data_inicio),
-#           CONSTRAINT user1_FK FOREIGN KEY (user1_ID) REFERENCES Usuario (user_ID),
-#           CONSTRAINT user2_FK FOREIGN KEY (user2_ID) REFERENCES Usuario (user_ID)
-#              
-#              );
-
-
-#""")
-
-
-#Opção mais prática: Follow/Unfollow
 
 cursor.execute("""
 CREATE TABLE Segue(
@@ -68,9 +49,9 @@ CREATE TABLE Segue(
             seguido_ID VARCHAR(10),
             data_inicio DATE NOT NULL,
             valido BOOLEAN,
-            CONSTRAINT FU_PK PRIMARY KEY (user1_ID, user2_ID, data_inicio),
-            CONSTRAINT seguidor_FK FOREIGN KEY (user1_ID) REFERENCES Usuario (user_ID),
-            CONSTRAINT seguido_FK FOREIGN KEY (user2_ID) REFERENCES Usuario (user_ID)
+            CONSTRAINT FU_PK PRIMARY KEY (seguidor_ID, seguido_ID, data_inicio),
+            CONSTRAINT seguidor_FK FOREIGN KEY (seguidor_ID) REFERENCES Usuario (user_ID),
+            CONSTRAINT seguido_FK FOREIGN KEY (seguido_ID) REFERENCES Usuario (user_ID)
               
               );
 
@@ -124,7 +105,8 @@ CREATE TABLE Inventario(
 
 cursor.execute("""
 CREATE TABLE Promocao(
-    promocao NUMERIC(2, 2) PRIMARY KEY,
+    promocao_ID VARCHAR(10) PRIMARY KEY,
+    promocao NUMERIC(2, 2),
     data_inicio DATE,
     data_final DATE,
     nome VARCHAR(20) NOT NULL
@@ -135,13 +117,13 @@ cursor.execute("""
 CREATE TABLE Compra(
     user_ID VARCHAR(10),
     jogo_ID VARCHAR(10),
-    promocao NUMERIC(2, 2) UNIQUE,
+    promocao_ID,
     data_compra DATE,
     nota_fiscal VARCHAR(8) NOT NULL,
     CONSTRAINT PK_COMPRA PRIMARY KEY(user_ID, jogo_ID),
     CONSTRAINT FK_USER FOREIGN KEY (user_ID) REFERENCES Usuario(user_ID),
     CONSTRAINT FK_JOGO FOREIGN KEY (jogo_ID) REFERENCES Jogo(jogo_ID),
-    CONSTRAINT FK_PROMO FOREIGN KEY (promocao) REFERENCES Promocao(promocao)
+    CONSTRAINT FK_PROMO FOREIGN KEY (promocao_ID) REFERENCES Promocao(promocao_ID)
 );
 """)
 
@@ -215,7 +197,7 @@ cursor.execute("""
     num_postagem NUMBER,
     conteudo VARCHAR(100),
     
-    CONSTRAINT PK_POST PRIMARY KEY (user_ID, disc_post),
+    CONSTRAINT PK_POST PRIMARY KEY (user_ID, num_postagem),
     CONSTRAINT FK_POST FOREIGN KEY (user_id) REFERENCES Usuario (user_ID)
     );
 
