@@ -9,6 +9,7 @@ collection_distribuidor = database['distribuidor']
 # Limpar coleções
 collection_distribuidor.delete_many({})
 
+# Mapeamento do caso 4 (um documento embutindo vários documentos) para o relacionamento Jogo/Servidor
 lista_distribuidores = [
     {
         'user_ID': '1',

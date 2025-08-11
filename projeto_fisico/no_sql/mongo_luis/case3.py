@@ -13,6 +13,7 @@ collection_jogo = database['jogo']
 collection_distribuidor.delete_many({})
 collection_jogo.delete_many({})
 
+# Mapeamento do caso 3 (um documento com um array de referências para documentos) para o relacionamento Jogo/Servidor
 lista_jogos = [
     {'nome': 'CS2', 'preco': 86.50},
     {'nome': 'Paladins', 'preco': 0.00},

@@ -11,6 +11,7 @@ collection_jogo = database['jogo']
 collection_distribuidor.delete_many({})
 collection_jogo.delete_many({})
 
+# Mapeamento do caso 1 (um documento referenciando apenas um documento) para o relacionamento jogo/servidor
 lista_distribuidores = [
     {'user_ID': 1},
     {'user_ID': 2},
