@@ -11,16 +11,14 @@ collection_jogo = database['jogo']
 collection_distribuidor.delete_many({})
 collection_jogo.delete_many({})
 
-# Inserir distribuidores (user_ID é a chave que será usada no relacionamento)
 lista_distribuidores = [
-    {'user_ID': 1, 'nome': 'Valve'},
-    {'user_ID': 2, 'nome': 'Hi-Rez Studios'},
-    {'user_ID': 3, 'nome': 'Behaviour Interactive'}
+    {'user_ID': 1},
+    {'user_ID': 2},
+    {'user_ID': 3}
 ]
 
 collection_distribuidor.insert_many(lista_distribuidores)
 
-# Inserir jogos referenciando o user_ID do distribuidor
 lista_jogos = [
     {'nome': 'CS2', 'preco': 86.50, 'distribuidor_user_ID': 1},
     {'nome': 'Paladins', 'preco': 0.00, 'distribuidor_user_ID': 2},
@@ -31,12 +29,10 @@ lista_jogos = [
 
 collection_jogo.insert_many(lista_jogos)
 
-# Consulta: pegar todos os jogos distribuídos pela "Valve"
-distribuidor_valve = collection_distribuidor.find_one({'nome': 'Valve'})
-valve_user_id = distribuidor_valve['user_ID']  # pegando o user_ID, não o _id
+# Consulta: encontrar os jogos distribuídos pelo distribuidor com user_ID 1
+distribuidor_ID = collection_distribuidor.find_one({'user_ID': 1})  
 
-jogos_valve = collection_jogo.find({'distribuidor_user_ID': valve_user_id})
+jogos_distribuidor = collection_jogo.find({'distribuidor_user_ID': distribuidor_ID['user_ID']})
 
-print("Jogos distribuídos pela Valve:")
-for jogo in jogos_valve:
+for jogo in jogos_distribuidor:
     print(jogo['nome'])

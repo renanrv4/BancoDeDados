@@ -13,7 +13,6 @@ collection_jogo = database['jogo']
 collection_distribuidor.delete_many({})
 collection_jogo.delete_many({})
 
-# Inserir jogos primeiro
 lista_jogos = [
     {'nome': 'CS2', 'preco': 86.50},
     {'nome': 'Paladins', 'preco': 0.00},
@@ -22,7 +21,6 @@ lista_jogos = [
     {'nome': 'Realm Royale', 'preco': 0.00}
 ]
 
-# Inserir jogos e obter seus IDs
 resultado_jogos = collection_jogo.insert_many(lista_jogos)
 jogos_ids = resultado_jogos.inserted_ids
 
@@ -30,21 +28,21 @@ jogos_ids = resultado_jogos.inserted_ids
 lista_distribuidores = [
     {
         'user_ID': '1',
-        'jogos': [jogos_ids[0], jogos_ids[3]]  # CS2 e Left 4 Dead 2
+        'jogos': [jogos_ids[0], jogos_ids[3]]
     },
     {
         'user_ID': '2',
-        'jogos': [jogos_ids[1], jogos_ids[4]]  # Paladins e Realm Royale
+        'jogos': [jogos_ids[1], jogos_ids[4]]  
     },
     {
         'user_ID': '3',
-        'jogos': [jogos_ids[2]]  # Dead By Daylight
+        'jogos': [jogos_ids[2]] 
     }
 ]
 
 collection_distribuidor.insert_many(lista_distribuidores)
 
-# Consulta: encontrar os jogos distribuidos por 'Valve'SSSS
+# Consulta: encontrar os jogos distribuidos por o distribuidor com user_ID '1'
 for distribuidor in collection_distribuidor.find({'user_ID': '1'}):
     for jogo_id in distribuidor['jogos']:
         jogo = collection_jogo.find_one({'_id': jogo_id})
