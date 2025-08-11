@@ -14,11 +14,11 @@ collection_jogo.delete_many({})
 
 # Mapeamento do caso 2 (um documento embutindo apenas um documentoo) para o relacionamento jogo/servidor
 lista_jogos = [
-    {'jogo_ID': '1', 'nome': 'CS2', 'preco': 86.50, 'distribuidor': {'user_ID': '1'}},
-    {'jogo_ID': '2', 'nome': 'Paladins', 'preco': 0.00, 'distribuidor': {'user_ID': '2'}},
-    {'jogo_ID': '3', 'nome': 'Dead By Daylight', 'preco': 60.00, 'distribuidor': {'user_ID': '3'}},
-    {'jogo_ID': '4', 'nome': 'Left 4 Dead 2', 'preco': 15.30, 'distribuidor': {'user_ID': '1'}},
-    {'jogo_ID': '5', 'nome': 'Realm Royale', 'preco': 0.00, 'distribuidor': {'user_ID': '2'}}
+    {'nome': 'CS2', 'preco': 86.50, 'distribuidor': {'user_ID': '1'}},
+    {'nome': 'Paladins', 'preco': 0.00, 'distribuidor': {'user_ID': '2'}},
+    {'nome': 'Dead By Daylight', 'preco': 60.00, 'distribuidor': {'user_ID': '3'}},
+    {'nome': 'Left 4 Dead 2', 'preco': 15.30, 'distribuidor': {'user_ID': '1'}},
+    {'nome': 'Realm Royale', 'preco': 0.00, 'distribuidor': {'user_ID': '2'}}
 ]
 
 collection_jogo.insert_many(lista_jogos)
@@ -29,4 +29,4 @@ resultado = collection_jogo.find(
 )
 
 for doc in resultado:
-    print(doc['nome'], doc['preco'])
+    print(doc)
